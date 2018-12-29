@@ -1,0 +1,22 @@
+[user]
+
+	email = Azizul82@hotmail.co.uk
+
+	name = Muhammed Haque
+
+[alias]
+	as = 	"!f() { \
+			git add $@; \
+			git status; \
+		};  f"
+	ac = 	"!f() { \
+			git as ${@:1:$(($#-1))}; \
+			git commit -m \"${@: -1}\"; \
+		}; f"
+	acp = 	"!f() { \
+			git ac \"$@\"; \
+			git push;  \
+		}; f"
+	s = status
+
+
